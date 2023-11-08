@@ -43,6 +43,8 @@ while True:
 
         if oRestartButton.handleEvent(event):
             frameCounter = 0  # clicked button, reset counter
+            oBall.x = random.randrange(0, oBall.maxWidth)
+            oBall.y = random.randrange(0, oBall.maxHeight)
 
     # 8 - Do any "per frame" actions
     oBall.update()  # tell the ball to update itself
@@ -62,4 +64,4 @@ while True:
     pygame.display.update()
 
     # 12 - Slow things down a bit
-    clock.tick(FRAMES_PER_SECOND)  # make pygame wait 
+    clock.tick(FRAMES_PER_SECOND)  # make pygame wait
